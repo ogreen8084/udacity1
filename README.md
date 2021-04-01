@@ -4,6 +4,10 @@ off of past information in the dataset.
 
 <h2>Best Model</h2>
 The best model was a Voting Ensemble Model. 
+<p align="center">
+  <img src="https://github.com/ogreen8084/udacity1/blob/main/Screen%20Shot%202021-04-01%20at%201.14.48%20PM.png" width="350" title="Pipeline">
+</p>
+
 
 <h3>Sklearn-Pipeline</h3>
 The sci-kit learn model was a logistic regression model. Regularization was used to optimize the model by penalizing errors. 
