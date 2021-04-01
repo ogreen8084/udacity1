@@ -12,15 +12,14 @@ The best model was a Voting Ensemble Model.
 <h3>Sklearn-Pipeline</h3>
 The sci-kit learn model was a logistic regression model. Regularization was used to optimize the model by penalizing errors. 
 The bandit policy with a slack amount stopped the iteration if an AUC less than the best performer minus the slack amount of 0.1. 
-The benefit of the bandit policy is that any run that doesn't fall within the best metric minus the slack amount it is terminated
-(https://azure.github.io/azureml-sdk-for-r/reference/bandit_policy.html#:~:text=Bandit%20is%20an%20early%20termination,the%20best%20performing%20training%20run). 
+The benefit of the bandit policy is that any run that doesn't fall within the best metric minus the slack amount it is terminated (link to article: bit.ly/3sK0nB5). AUC benefits the model because the class sizes are skewed. It helps the model not overfit to a single class and to identify if the model can distinguish between true positives and false positives better than random chance (link to article: bit.ly/2QPWT1G).
 
 
 
 <h3>AutoML</h3>
 The AutoML model generated about 50 different models automatically within the 30 minute experiment window. 
 It utilized many XGBoost and Random Forest models with different scaling methods. Ultimately a voting ensemble model fit the data best. 
-The model utilized 'AUC_weighted' as the primary evaluation method to balance between high precision and recall. 
+
 
 <h3>Comparison</h3>
 With manually setting hyperparameters for the sci-kit learn model I achieved an accuracy of about 91%. By utilizing AutoML and letting it
