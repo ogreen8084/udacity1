@@ -4,14 +4,17 @@ off of past information in the dataset.
 
 <h2>Best Model</h2>
 The best model was a Voting Ensemble Model. 
-<p align="center">
-  <img src="https://github.com/ogreen8084/udacity1/blob/main/Screen%20Shot%202021-04-01%20at%201.14.48%20PM.png" width="350" title="Pipeline">
+<p align="left">
+<img src="https://github.com/ogreen8084/udacity1/blob/main/Screen%20Shot%202021-04-01%20at%201.14.48%20PM.png" width="500" title="Pipeline">
 </p>
 
 
 <h3>Sklearn-Pipeline</h3>
 The sci-kit learn model was a logistic regression model. Regularization was used to optimize the model by penalizing errors. 
 The bandit policy with a slack amount stopped the iteration if an AUC less than the best performer minus the slack amount of 0.1. 
+The benefit of the bandit policy is that any run that doesn't fall within the best metric minus the slack amount it is terminated
+(https://azure.github.io/azureml-sdk-for-r/reference/bandit_policy.html#:~:text=Bandit%20is%20an%20early%20termination,the%20best%20performing%20training%20run). 
+
 
 
 <h3>AutoML</h3>
