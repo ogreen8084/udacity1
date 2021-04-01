@@ -12,7 +12,7 @@ The best model was a Voting Ensemble Model.
 <h3>Sklearn-Pipeline</h3>
 The sci-kit learn model was a logistic regression model. Regularization was used to optimize the model by penalizing errors. 
 The bandit policy with a slack amount stopped the iteration if an AUC less than the best performer minus the slack amount of 0.1. 
-The benefit of the bandit policy is that any run that doesn't fall within the best metric minus the slack amount it is terminated (link to article: <link>bit.ly/3sK0nB5</link>). AUC benefits the model because the class sizes are skewed. It helps the model not overfit to a single class and to identify if the model can distinguish between true positives and false positives better than random chance (link to article: bit.ly/2QPWT1G).
+The benefit of the bandit policy is that any run that doesn't fall within the best metric minus the slack amount it is terminated (link to article: bit.ly/3sK0nB5). AUC benefits the model because the class sizes are skewed. It helps the model not overfit to a single class and to identify if the model can distinguish between true positives and false positives better than random chance (link to article: bit.ly/2QPWT1G).
 
 
 
