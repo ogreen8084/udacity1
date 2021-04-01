@@ -19,6 +19,10 @@ The benefit of the bandit policy is that any run that doesn't fall within the be
 <h3>AutoML</h3>
 The AutoML model generated about 50 different models automatically within the 30 minute experiment window. 
 It utilized many XGBoost and Random Forest models with different scaling methods. Ultimately a voting ensemble model fit the data best. 
+Parameters for the model were as follows: 
+experiment_timeout_minutes= 30, so that the model would not overuse resources and be too costly to run. 
+primary_metric='AUC_weighted', as noted above AUC is a better metric than accuracy when the class sizes are skewed. 
+cross_validations: 3, cross validation helps the model generalize and not overfit the training data. 
 
 
 <h3>Comparison</h3>
@@ -27,7 +31,7 @@ pick the best combination of models and standardizations I achieved an accuracy 
 models and was not restricted by model choice or one standardization method. 
 
 <h3>Future Work</h3>
-In the future to improve this model we could address the issue with class balancing. 
+In the future to improve this model we could address the issue with class balancing. We could also bring in third party data if it were available to assist with predicting. Importing pre-trained neural networks and adjusting the weights could possibly yield better results. 
 
 
 
